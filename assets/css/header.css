@@ -1,0 +1,373 @@
+/* ==========================================================================
+   Janaki Professional Academy — School ERP
+   header.css — header, navbar, sidebar, mobile menu, hamburger only
+   ========================================================================== */
+
+/* -------------------- 1. Top header bar (ERP pages) -------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  min-width: 0;
+}
+
+.site-header__hamburger {
+  display: none;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.site-header__hamburger svg {
+  width: 20px;
+  height: 20px;
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  overflow: hidden;
+  flex-shrink: 1;
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.site-header__brand-text {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.site-header__brand-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-header__brand-text span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-header__spacer {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.site-header__icon-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: pointer;
+  position: relative;
+}
+
+.site-header__icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.site-header__badge-dot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--danger);
+}
+
+.site-header__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.site-header__user-avatar {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--background);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.site-header__user-info {
+  min-width: 0;
+  display: none;
+}
+
+.site-header__user-info strong {
+  display: block;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-header__user-info span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+@media (min-width: 640px) {
+  .site-header__user-info {
+    display: block;
+    max-width: 140px;
+  }
+}
+
+/* -------------------- 2. Sidebar (ERP pages) -------------------- */
+.sidebar {
+  flex-shrink: 0;
+  width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  background: var(--primary-dark);
+  color: #eef2f6;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: var(--header-height);
+  padding: 0 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.sidebar__brand-logo {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  background: var(--secondary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.sidebar__brand-text {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.sidebar__brand-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.sidebar__brand-text span {
+  display: block;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar__nav {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 12px;
+  min-width: 0;
+}
+
+.sidebar__section-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 12px 10px 6px;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+  min-width: 0;
+}
+
+.sidebar__link span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar__link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.sidebar__link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.sidebar__link.is-active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.sidebar__close {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 26, 34, 0.5);
+  z-index: 399;
+}
+
+/* -------------------- 3. Public / landing nav (index.html) -------------------- */
+.public-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  min-width: 0;
+}
+
+.public-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.public-nav__brand strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.public-nav__brand span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* -------------------- 4. Mobile behavior -------------------- */
+@media (max-width: 768px) {
+  .site-header__hamburger {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 400;
+    max-width: 82vw;
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    box-shadow: var(--shadow-md);
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  .sidebar-overlay.is-open {
+    display: block;
+  }
+
+  .public-nav {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+  }
+}
