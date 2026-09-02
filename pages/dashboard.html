@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Janaki Professional Academy ERP</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/header.css" />
+<link rel="stylesheet" href="../assets/css/footer.css" />
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M12 3 2 8l10 5 10-5-10-5Z" />
+        </svg>
+      </div>
+      <div class="sidebar__brand-text">
+        <strong>Janaki Academy</strong>
+        <span>School ERP</span>
+      </div>
+      <button class="sidebar__close" id="sidebarClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="sidebar__section-label">Overview</p>
+      <a href="dashboard.html" class="sidebar__link is-active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="3" width="7" height="9" rx="1" /><rect x="14" y="3" width="7" height="5" rx="1" /><rect x="14" y="12" width="7" height="9" rx="1" /><rect x="3" y="16" width="7" height="5" rx="1" /></svg>
+        <span>Dashboard</span>
+      </a>
+      <p class="sidebar__section-label">People</p>
+      <a href="students.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+        <span>Students</span>
+      </a>
+      <a href="teachers.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z" /><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" /></svg>
+        <span>Teachers</span>
+      </a>
+      <p class="sidebar__section-label">Operations</p>
+      <a href="attendance.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /><path d="m9 16 2 2 4-4" /></svg>
+        <span>Attendance</span>
+      </a>
+      <a href="fees-salary.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20" /></svg>
+        <span>Fees &amp; salary</span>
+      </a>
+      <a href="notices.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+        <span>Notices</span>
+      </a>
+      <a href="documents.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /></svg>
+        <span>Documents</span>
+      </a>
+      <p class="sidebar__section-label">System</p>
+      <a href="settings.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 0 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15Z" /></svg>
+        <span>Settings</span>
+      </a>
+      <a href="../index.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /><path d="M9 22V12h6v10" /></svg>
+        <span>Back to site</span>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="app-main">
+    <header class="site-header">
+      <button class="site-header__hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+      <div class="site-header__brand">
+        <div class="site-header__logo" aria-hidden="true">JA</div>
+        <div class="site-header__brand-text">
+          <strong>Janaki Professional Academy</strong>
+          <span>School Management ERP</span>
+        </div>
+      </div>
+      <div class="site-header__spacer"></div>
+      <div class="site-header__actions">
+        <button class="site-header__icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+          <span class="site-header__badge-dot"></span>
+        </button>
+        <div class="site-header__user">
+          <div class="site-header__user-avatar">AD</div>
+          <div class="site-header__user-info">
+            <strong>Admin User</strong>
+            <span>Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+
+      <div class="page-header">
+        <div class="page-header__text">
+          <h1>Dashboard</h1>
+          <p class="page-header__subtitle">Overview for Wednesday, 3 September 2026 · Academic session 2026–27</p>
+        </div>
+        <div class="page-header__actions">
+          <button class="btn btn-outline" id="exportPdfBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /></svg>
+            Export PDF
+          </button>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <span class="stat-card__label">Total students</span>
+            <span class="stat-card__value">642</span>
+            <span class="stat-card__meta is-up">+12 this month</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Total teachers</span>
+            <span class="stat-card__value">38</span>
+            <span class="stat-card__meta">2 on leave today</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Today's attendance</span>
+            <span class="stat-card__value">94.2%</span>
+            <span class="stat-card__meta is-up">+1.1% vs yesterday</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Pending fees</span>
+            <span class="stat-card__value">₹1,84,200</span>
+            <span class="stat-card__meta is-down">37 students due</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid" style="grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);">
+
+          <div class="card">
+            <div class="card__header">
+              <p class="card__title">Monthly fee collection</p>
+              <span class="badge badge-neutral">Session 2026–27</span>
+            </div>
+            <div class="table-wrapper">
+              <table class="table">
+                <thead>
+                  <tr><th>Month</th><th>Collected</th><th>Target</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>April 2026</td><td>₹9,40,000</td><td>₹10,00,000</td><td><span class="badge badge-warning">94%</span></td></tr>
+                  <tr><td>May 2026</td><td>₹9,85,000</td><td>₹10,00,000</td><td><span class="badge badge-success">98%</span></td></tr>
+                  <tr><td>June 2026</td><td>₹7,20,000</td><td>₹10,00,000</td><td><span class="badge badge-danger">72%</span></td></tr>
+                  <tr><td>July 2026</td><td>₹9,60,000</td><td>₹10,00,000</td><td><span class="badge badge-success">96%</span></td></tr>
+                  <tr><td>August 2026</td><td>₹9,10,000</td><td>₹10,00,000</td><td><span class="badge badge-warning">91%</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <p class="card__title">Salary summary — August 2026</p>
+            </div>
+            <div class="grid grid-2">
+              <div class="stat-card">
+                <span class="stat-card__label">Total payroll</span>
+                <span class="stat-card__value">₹18.6L</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__label">Paid</span>
+                <span class="stat-card__value">34 / 38</span>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size:0.82rem; margin-top:10px;">4 staff salaries pending disbursement for August.</p>
+            <a href="fees-salary.html" class="btn btn-outline btn-sm" style="margin-top:6px;">View salary records</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid" style="grid-template-columns: minmax(0,1fr) minmax(0,1fr);">
+
+          <div class="card">
+            <div class="card__header">
+              <p class="card__title">Recent notices</p>
+              <a href="notices.html" class="btn btn-sm btn-outline">View all</a>
+            </div>
+            <ul>
+              <li style="padding:10px 0; border-bottom:1px solid var(--border);">
+                <div class="flex items-center gap-8" style="justify-content:space-between;">
+                  <strong style="font-size:0.88rem;">Independence Day celebration schedule</strong>
+                  <span class="badge badge-info">Event</span>
+                </div>
+                <span class="text-muted" style="font-size:0.78rem;">Posted 2 Sep 2026</span>
+              </li>
+              <li style="padding:10px 0; border-bottom:1px solid var(--border);">
+                <div class="flex items-center gap-8" style="justify-content:space-between;">
+                  <strong style="font-size:0.88rem;">Term 2 fee payment deadline extended</strong>
+                  <span class="badge badge-warning">Fees</span>
+                </div>
+                <span class="text-muted" style="font-size:0.78rem;">Posted 30 Aug 2026</span>
+              </li>
+              <li style="padding:10px 0;">
+                <div class="flex items-center gap-8" style="justify-content:space-between;">
+                  <strong style="font-size:0.88rem;">Parent-teacher meeting — Class VIII to X</strong>
+                  <span class="badge badge-neutral">General</span>
+                </div>
+                <span class="text-muted" style="font-size:0.78rem;">Posted 28 Aug 2026</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <p class="card__title">Recent activity</p>
+            </div>
+            <ul>
+              <li style="padding:10px 0; border-bottom:1px solid var(--border); font-size:0.85rem;">
+                <strong>New admission:</strong> Priya Terang added to Class VI-A <span class="text-muted" style="display:block; font-size:0.75rem;">10 minutes ago</span>
+              </li>
+              <li style="padding:10px 0; border-bottom:1px solid var(--border); font-size:0.85rem;">
+                <strong>Fee payment:</strong> ₹8,500 received from Rahul Bordoloi <span class="text-muted" style="display:block; font-size:0.75rem;">45 minutes ago</span>
+              </li>
+              <li style="padding:10px 0; font-size:0.85rem;">
+                <strong>Attendance marked:</strong> Class IX-B by Mrs. Lima Timung <span class="text-muted" style="display:block; font-size:0.75rem;">1 hour ago</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <div class="card__header">
+            <p class="card__title">Quick actions</p>
+          </div>
+          <div class="grid grid-4">
+            <a href="students.html" class="btn btn-outline btn-block">Add student</a>
+            <a href="teachers.html" class="btn btn-outline btn-block">Add teacher</a>
+            <a href="attendance.html" class="btn btn-outline btn-block">Mark attendance</a>
+            <a href="notices.html" class="btn btn-outline btn-block">Post notice</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy">&copy; 2026 Janaki Professional Academy, Dikhlem, Karbi Anglong, Assam.</span>
+        <div class="site-footer__links">
+          <a href="settings.html">Settings</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
