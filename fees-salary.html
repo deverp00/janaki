@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fees & Salary — Janaki Professional Academy ERP</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/header.css" />
+<link rel="stylesheet" href="../assets/css/footer.css" />
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="app-shell">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M12 3 2 8l10 5 10-5-10-5Z" />
+        </svg>
+      </div>
+      <div class="sidebar__brand-text">
+        <strong>Janaki Academy</strong>
+        <span>School ERP</span>
+      </div>
+      <button class="sidebar__close" id="sidebarClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <p class="sidebar__section-label">Overview</p>
+      <a href="dashboard.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="3" width="7" height="9" rx="1" /><rect x="14" y="3" width="7" height="5" rx="1" /><rect x="14" y="12" width="7" height="9" rx="1" /><rect x="3" y="16" width="7" height="5" rx="1" /></svg>
+        <span>Dashboard</span>
+      </a>
+      <p class="sidebar__section-label">People</p>
+      <a href="students.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+        <span>Students</span>
+      </a>
+      <a href="teachers.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z" /><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" /></svg>
+        <span>Teachers</span>
+      </a>
+      <p class="sidebar__section-label">Operations</p>
+      <a href="attendance.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /><path d="m9 16 2 2 4-4" /></svg>
+        <span>Attendance</span>
+      </a>
+      <a href="fees-salary.html" class="sidebar__link is-active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20" /></svg>
+        <span>Fees &amp; salary</span>
+      </a>
+      <a href="notices.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+        <span>Notices</span>
+      </a>
+      <a href="documents.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /></svg>
+        <span>Documents</span>
+      </a>
+      <p class="sidebar__section-label">System</p>
+      <a href="settings.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 0 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15Z" /></svg>
+        <span>Settings</span>
+      </a>
+      <a href="../index.html" class="sidebar__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /><path d="M9 22V12h6v10" /></svg>
+        <span>Back to site</span>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="app-main">
+    <header class="site-header">
+      <button class="site-header__hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+      <div class="site-header__brand">
+        <div class="site-header__logo" aria-hidden="true">JA</div>
+        <div class="site-header__brand-text">
+          <strong>Janaki Professional Academy</strong>
+          <span>School Management ERP</span>
+        </div>
+      </div>
+      <div class="site-header__spacer"></div>
+      <div class="site-header__actions">
+        <button class="site-header__icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+          <span class="site-header__badge-dot"></span>
+        </button>
+        <div class="site-header__user">
+          <div class="site-header__user-avatar">AD</div>
+          <div class="site-header__user-info">
+            <strong>Admin User</strong>
+            <span>Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+
+      <div class="page-header">
+        <div class="page-header__text">
+          <h1>Fees &amp; salary</h1>
+          <p class="page-header__subtitle">Manage student fee collection and staff payroll</p>
+        </div>
+        <div class="page-header__actions">
+          <button class="btn btn-outline" id="exportExcelBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /></svg>
+            Export Excel
+          </button>
+          <button class="btn btn-outline" id="exportPdfBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /></svg>
+            Export PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn is-active" data-tab-target="feesTab">Fees</button>
+        <button class="tab-btn" data-tab-target="salaryTab">Salary</button>
+      </div>
+
+      <!-- ===================== FEES TAB ===================== -->
+      <div class="tab-panel is-active" id="feesTab">
+
+        <div class="grid grid-4" style="margin-bottom: 18px;">
+          <div class="stat-card">
+            <span class="stat-card__label">Total collection (session)</span>
+            <span class="stat-card__value">₹45.15L</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Pending fees</span>
+            <span class="stat-card__value text-danger">₹1,84,200</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Paid this month</span>
+            <span class="stat-card__value">581</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Overdue students</span>
+            <span class="stat-card__value">37</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="table-toolbar">
+            <div class="search-bar">
+              <input type="search" class="form-control" id="feeSearch" placeholder="Search by student name or ID" />
+            </div>
+            <div class="filter-bar" style="margin-bottom:0;">
+              <select class="form-control" id="feeStatusFilter">
+                <option value="">All status</option>
+                <option>Paid</option>
+                <option>Pending</option>
+                <option>Partial</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="table" id="feesTable">
+              <thead>
+                <tr>
+                  <th>Receipt ID</th>
+                  <th>Student</th>
+                  <th>Class</th>
+                  <th>Amount</th>
+                  <th>Balance</th>
+                  <th>Payment date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="Paid">
+                  <td>JPA-RCT-100231</td>
+                  <td>Priya Terang</td>
+                  <td>Class VI-A</td>
+                  <td>₹8,500</td>
+                  <td>₹0</td>
+                  <td>28 Aug 2026</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-receipt">Receipt</button></td>
+                </tr>
+                <tr data-status="Pending">
+                  <td>JPA-RCT-100232</td>
+                  <td>Ankit Kro</td>
+                  <td>Class VII-C</td>
+                  <td>₹7,200</td>
+                  <td>₹7,200</td>
+                  <td>—</td>
+                  <td><span class="badge badge-danger">Pending</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-receipt">Receipt</button></td>
+                </tr>
+                <tr data-status="Partial">
+                  <td>JPA-RCT-100233</td>
+                  <td>Sonali Timung</td>
+                  <td>Class X-A</td>
+                  <td>₹9,000</td>
+                  <td>₹3,500</td>
+                  <td>20 Aug 2026</td>
+                  <td><span class="badge badge-warning">Partial</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-receipt">Receipt</button></td>
+                </tr>
+                <tr data-status="Paid">
+                  <td>JPA-RCT-100234</td>
+                  <td>Rahul Bordoloi</td>
+                  <td>Class IX-B</td>
+                  <td>₹8,500</td>
+                  <td>₹0</td>
+                  <td>02 Sep 2026</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-receipt">Receipt</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="empty-state hidden" id="feesEmptyState">No fee records match your search or filters.</p>
+        </div>
+      </div>
+
+      <!-- ===================== SALARY TAB ===================== -->
+      <div class="tab-panel" id="salaryTab">
+
+        <div class="grid grid-4" style="margin-bottom: 18px;">
+          <div class="stat-card">
+            <span class="stat-card__label">Total payroll — Aug 2026</span>
+            <span class="stat-card__value">₹18.6L</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Paid</span>
+            <span class="stat-card__value text-success">34</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Pending</span>
+            <span class="stat-card__value text-danger">4</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Staff count</span>
+            <span class="stat-card__value">38</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="table-toolbar">
+            <div class="search-bar">
+              <input type="search" class="form-control" id="salarySearch" placeholder="Search by staff name or ID" />
+            </div>
+            <div class="filter-bar" style="margin-bottom:0;">
+              <select class="form-control" id="salaryMonthFilter">
+                <option>August 2026</option>
+                <option>July 2026</option>
+                <option>June 2026</option>
+              </select>
+              <select class="form-control" id="salaryStatusFilter">
+                <option value="">All status</option>
+                <option>Paid</option>
+                <option>Pending</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="table" id="salaryTable">
+              <thead>
+                <tr>
+                  <th>Staff ID</th>
+                  <th>Name</th>
+                  <th>Basic salary</th>
+                  <th>Allowances</th>
+                  <th>Deductions</th>
+                  <th>Net salary</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-status="Paid">
+                  <td>JPA-TCH-0001</td>
+                  <td>Lima Timung</td>
+                  <td>₹42,000</td>
+                  <td>₹4,500</td>
+                  <td>₹1,200</td>
+                  <td>₹45,300</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-payslip">Payslip</button></td>
+                </tr>
+                <tr data-status="Paid">
+                  <td>JPA-TCH-0002</td>
+                  <td>Bikash Ronghang</td>
+                  <td>₹40,000</td>
+                  <td>₹4,000</td>
+                  <td>₹1,000</td>
+                  <td>₹43,000</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-payslip">Payslip</button></td>
+                </tr>
+                <tr data-status="Pending">
+                  <td>JPA-TCH-0003</td>
+                  <td>Nandita Hansepi</td>
+                  <td>₹38,000</td>
+                  <td>₹3,500</td>
+                  <td>₹900</td>
+                  <td>₹40,600</td>
+                  <td><span class="badge badge-danger">Pending</span></td>
+                  <td class="col-actions"><button class="btn btn-sm btn-outline btn-view-payslip">Payslip</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="empty-state hidden" id="salaryEmptyState">No salary records match your search or filters.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy">&copy; 2026 Janaki Professional Academy, Dikhlem, Karbi Anglong, Assam.</span>
+        <div class="site-footer__links">
+          <a href="settings.html">Settings</a>
+          <a href="../index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- Receipt preview modal -->
+<div class="modal-overlay" id="receiptModal">
+  <div class="modal">
+    <div class="modal__header">
+      <h3 class="modal__title">Fee receipt</h3>
+      <button class="modal__close" data-close-modal="receiptModal" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <div class="modal__body">
+      <div class="print-preview-wrapper">
+        <div class="print-sheet" id="receiptPrintArea">
+          <div style="text-align:center; border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:12px;">
+            <strong style="font-family:var(--font-heading); font-size:1.05rem;">Janaki Professional Academy</strong>
+            <p class="text-muted" style="font-size:0.75rem; margin:2px 0 0;">Dikhlem, Dayangmukh West, Karbi Anglong, Assam – 782448</p>
+            <p class="text-muted" style="font-size:0.75rem; margin:0;">Phone: 7896579939 · Email: janakipa@gmail.com</p>
+          </div>
+          <h4 style="text-align:center; margin-bottom:12px;">Fee Receipt</h4>
+          <dl class="detail-list" style="grid-template-columns:1fr 1fr;">
+            <div><dt>Receipt ID</dt><dd id="receiptId">JPA-RCT-100231</dd></div>
+            <div><dt>Date</dt><dd id="receiptDate">28 Aug 2026</dd></div>
+            <div><dt>Student name</dt><dd id="receiptStudent">Priya Terang</dd></div>
+            <div><dt>Class</dt><dd id="receiptClass">Class VI-A</dd></div>
+            <div><dt>Amount paid</dt><dd id="receiptAmount">₹8,500</dd></div>
+            <div><dt>Balance</dt><dd id="receiptBalance">₹0</dd></div>
+          </dl>
+          <p class="text-muted" style="font-size:0.75rem; margin-top:16px; text-align:center;">This is a system-generated receipt.</p>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-outline" data-close-modal="receiptModal">Close</button>
+        <button class="btn btn-primary" id="printReceiptBtn">Print receipt</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Payslip preview modal -->
+<div class="modal-overlay" id="payslipModal">
+  <div class="modal">
+    <div class="modal__header">
+      <h3 class="modal__title">Salary payslip</h3>
+      <button class="modal__close" data-close-modal="payslipModal" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <div class="modal__body">
+      <div class="print-preview-wrapper">
+        <div class="print-sheet" id="payslipPrintArea">
+          <div style="text-align:center; border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:12px;">
+            <strong style="font-family:var(--font-heading); font-size:1.05rem;">Janaki Professional Academy</strong>
+            <p class="text-muted" style="font-size:0.75rem; margin:2px 0 0;">Dikhlem, Dayangmukh West, Karbi Anglong, Assam – 782448</p>
+          </div>
+          <h4 style="text-align:center; margin-bottom:12px;">Salary Payslip — <span id="payslipMonth">August 2026</span></h4>
+          <dl class="detail-list" style="grid-template-columns:1fr 1fr;">
+            <div><dt>Staff ID</dt><dd id="payslipStaffId">JPA-TCH-0001</dd></div>
+            <div><dt>Name</dt><dd id="payslipName">Lima Timung</dd></div>
+            <div><dt>Basic salary</dt><dd id="payslipBasic">₹42,000</dd></div>
+            <div><dt>Allowances</dt><dd id="payslipAllowances">₹4,500</dd></div>
+            <div><dt>Deductions</dt><dd id="payslipDeductions">₹1,200</dd></div>
+            <div><dt>Net salary</dt><dd id="payslipNet">₹45,300</dd></div>
+          </dl>
+          <p class="text-muted" style="font-size:0.75rem; margin-top:16px; text-align:center;">This is a system-generated payslip.</p>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-outline" data-close-modal="payslipModal">Close</button>
+        <button class="btn btn-primary" id="printPayslipBtn">Print payslip</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
