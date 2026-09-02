@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Janaki Professional Academy — School ERP
+   footer.css — footer layout only
+   ========================================================================== */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 18px 24px;
+  min-width: 0;
+}
+
+.site-footer__inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.site-footer__copy {
+  font-size: 0.78rem;
+  color: var(--muted);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-footer__links a {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.site-footer__links a:hover {
+  color: var(--primary);
+}
+
+/* -------------------- Public landing footer -------------------- */
+.public-footer {
+  border-top: 1px solid var(--border);
+  background: var(--primary-dark);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 32px 24px 20px;
+  min-width: 0;
+}
+
+.public-footer__inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  min-width: 0;
+}
+
+.public-footer h4 {
+  color: #fff;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.public-footer p,
+.public-footer a {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.public-footer a:hover {
+  color: #fff;
+}
+
+.public-footer__bottom {
+  max-width: var(--max-content-width);
+  margin: 20px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+  .site-footer,
+  .public-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
