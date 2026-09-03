@@ -1,179 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Janaki Professional Academy — School Management ERP</title>
-<meta name="description" content="School Management ERP for Janaki Professional Academy, Dikhlem, Karbi Anglong, Assam." />
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="header.css" />
-<link rel="stylesheet" href="footer.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Janaki Professional Academy ERP</title>
+    <meta name="description" content="School Management ERP — Janaki Professional Academy, Dikhlem, West Karbi Anglong, Assam, India">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="login-page">
 
-<header class="public-nav">
-  <div class="public-nav__brand">
-    <div class="site-header__logo" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-        <path d="M12 3 2 8l10 5 10-5-10-5Z" />
-        <path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" />
-      </svg>
-    </div>
-    <div>
-      <strong>Janaki Professional Academy</strong>
-      <span>School Management ERP</span>
-    </div>
-  </div>
-  <nav>
-    <a href="pages/dashboard.html" class="btn btn-primary">Open dashboard</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="container" style="padding: 56px 24px; max-width: 1400px; margin: 0 auto;">
-    <div class="grid" style="grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr); align-items: center; gap: 40px;">
-      <div style="min-width:0;">
-        <span class="badge badge-info" style="margin-bottom:14px;">Academic session 2026–27</span>
-        <h1 style="font-size: 2.1rem; margin-bottom: 14px;">One place to run the academy — students, staff, fees and records.</h1>
-        <p class="text-muted" style="font-size: 1rem; max-width: 60ch;">
-          Janaki Professional Academy's management system brings admissions, attendance, fee collection, staff salary, notices and documents together in a single, straightforward dashboard.
-        </p>
-        <div class="flex flex-wrap gap-8" style="margin-top: 22px;">
-          <a href="pages/dashboard.html" class="btn btn-primary">Go to dashboard</a>
-          <a href="pages/settings.html" class="btn btn-outline">Institution settings</a>
+    <!-- ============================================================
+    LOGIN PAGE — SPLIT LAYOUT
+    Left: Branding Panel | Right: Login Form
+    ============================================================ -->
+    <div class="login-wrapper">
+        <!-- LEFT BRANDING PANEL -->
+        <div class="login-branding" aria-hidden="true">
+            <div class="login-branding-inner">
+                <!-- School Logo (SVG) -->
+                <div class="login-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M32 4 4 18l28 14 28-14-28-14z" />
+                        <path d="M4 18v20c0 4 6 8 14 10M60 18v20c0 4-6 8-14 10" />
+                        <path d="M32 32v16" />
+                        <path d="M18 48c0 4 4 8 14 10 10-2 14-6 14-10" />
+                        <circle cx="32" cy="18" r="2" fill="currentColor" stroke="none" />
+                    </svg>
+                </div>
+                <!-- School Name -->
+                <h1 class="login-school-name">Janaki Professional Academy</h1>
+                <!-- Address -->
+                <p class="login-school-address">
+                    Dikhlem, West Karbi Anglong<br>
+                    Assam, India
+                </p>
+                <!-- Tagline -->
+                <p class="login-tagline">
+                    "Empowering Minds, Building Futures"
+                </p>
+                <!-- Decorative Divider -->
+                <div class="login-divider"></div>
+                <!-- Feature List -->
+                <ul class="login-feature-list">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                        Comprehensive Student Management
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                        Real-time Attendance &amp; Examinations
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                        Transparent Fees &amp; Salary Management
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="card" style="min-width:0;">
-        <div class="card__header">
-          <p class="card__title">Today at a glance</p>
-          <span class="badge badge-neutral">Demo data</span>
+
+        <!-- RIGHT LOGIN FORM PANEL -->
+        <div class="login-form-panel">
+            <div class="login-form-container">
+                <!-- Card -->
+                <div class="card login-card">
+                    <div class="card-header login-card-header">
+                        <h2 class="login-title">Sign In</h2>
+                        <p class="login-subtitle">Access your ERP dashboard</p>
+                    </div>
+                    <div class="card-body login-card-body">
+                        <!-- Error / Success Notification (hidden by default) -->
+                        <div id="login-message" class="login-message" role="alert" hidden></div>
+
+                        <!-- Login Form -->
+                        <form id="login-form" novalidate autocomplete="off">
+                            <!-- Username / Email -->
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username or Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                    </span>
+                                    <input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    class="form-control"
+                                    placeholder="Enter your username or email"
+                                    required
+                                    autocomplete="username"
+                                    aria-required="true"
+                                    />
+                                </div>
+                                <small class="form-error" id="username-error" hidden>Please enter your username or email.</small>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                    </span>
+                                    <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="form-control"
+                                    placeholder="Enter your password"
+                                    required
+                                    autocomplete="current-password"
+                                    aria-required="true"
+                                    />
+                                    <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="toggle-password"
+                                    aria-label="Show password"
+                                    title="Show password"
+                                    >
+                                    <!-- Eye Icon (shown when password is hidden) -->
+                                    <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                                    <!-- Eye-off Icon (shown when password is visible) -->
+                                    <svg id="eye-off-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" /><line x1="1" y1="1" x2="23" y2="23" /></svg>
+                                </button>
+                            </div>
+                            <small class="form-error" id="password-error" hidden>Please enter your password.</small>
+                        </div>
+
+                        <!-- Remember Me + Forgot Password -->
+                        <div class="login-options-row">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="remember-me" name="remember-me" />
+                                <span class="checkbox-custom" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                                </span>
+                                <span class="checkbox-text">Remember me</span>
+                            </label>
+                            <button type="button" class="btn-link" id="forgot-password-link" aria-label="Forgot password">
+                                Forgot Password?
+                            </button>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block login-submit-btn">
+                            <span class="btn-text">Sign In</span>
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                        </button>
+                    </form>
+                </div>
+                <!-- Card Footer -->
+                <div class="card-footer login-card-footer">
+                    <p class="login-footer-text">
+                        &copy; 2026 Janaki Professional Academy. All rights reserved.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="grid grid-2">
-          <div class="stat-card">
-            <span class="stat-card__label">Total students</span>
-            <span class="stat-card__value">642</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__label">Total teachers</span>
-            <span class="stat-card__value">38</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__label">Today's attendance</span>
-            <span class="stat-card__value">94%</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__label">Pending fees</span>
-            <span class="stat-card__value">₹1.8L</span>
-          </div>
+    </div>
+</div>
+
+<!-- ============================================================
+FORGOT PASSWORD MODAL
+============================================================ -->
+<div class="modal-overlay" id="forgot-password-modal" role="dialog" aria-modal="true" aria-labelledby="forgot-password-title" hidden>
+    <div class="modal-container modal-sm">
+        <div class="modal-header">
+            <h3 class="modal-title" id="forgot-password-title">Reset Password</h3>
+            <button type="button" class="btn-icon modal-close" id="forgot-password-close" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+            </button>
         </div>
-      </div>
+        <div class="modal-body">
+            <p class="modal-description">
+                Enter your registered email address. We will send you a password reset link.
+            </p>
+            <form id="forgot-password-form" novalidate>
+                <div class="form-group">
+                    <label for="reset-email" class="form-label">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                        </span>
+                        <input
+                        type="email"
+                        id="reset-email"
+                        name="reset-email"
+                        class="form-control"
+                        placeholder="Enter your registered email"
+                        required
+                        autocomplete="email"
+                        />
+                    </div>
+                    <small class="form-error" id="reset-email-error" hidden>Please enter a valid email address.</small>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="forgot-password-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send Reset Link</button>
+                </div>
+            </form>
+            <!-- Success message (hidden by default) -->
+            <div id="reset-success" class="reset-success" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                <p>Password reset link sent! Check your email.</p>
+            </div>
+        </div>
     </div>
-  </section>
+</div>
 
-  <section class="container" style="padding: 0 24px 56px; max-width: 1400px; margin: 0 auto;">
-    <h2 style="margin-bottom: 18px;">Everything the front office needs</h2>
-    <div class="grid grid-4">
+<!-- ============================================================
+TOAST CONTAINER
+============================================================ -->
+<div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-        </svg>
-        <h3>Students</h3>
-        <p class="text-muted" style="font-size:0.85rem;">Admissions, profiles and records in one searchable list.</p>
-      </div>
-
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z" />
-          <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
-        </svg>
-        <h3>Teachers</h3>
-        <p class="text-muted" style="font-size:0.85rem;">Staff directory with subjects, classes and contact details.</p>
-      </div>
-
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <rect x="3" y="4" width="18" height="18" rx="2" />
-          <path d="M16 2v4M8 2v4M3 10h18" />
-          <path d="m9 16 2 2 4-4" />
-        </svg>
-        <h3>Attendance</h3>
-        <p class="text-muted" style="font-size:0.85rem;">Mark daily attendance by class and track percentages.</p>
-      </div>
-
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <rect x="2" y="5" width="20" height="14" rx="2" />
-          <path d="M2 10h20" />
-        </svg>
-        <h3>Fees &amp; salary</h3>
-        <p class="text-muted" style="font-size:0.85rem;">Collect fees, run payroll and print receipts or payslips.</p>
-      </div>
-
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
-          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-        </svg>
-        <h3>Notices</h3>
-        <p class="text-muted" style="font-size:0.85rem;">Publish and manage announcements for staff and parents.</p>
-      </div>
-
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
-          <path d="M14 2v6h6" />
-        </svg>
-        <h3>Documents</h3>
-        <p class="text-muted" style="font-size:0.85rem;">ID cards, admit cards and certificates, ready to print.</p>
-      </div>
-
-      <div class="card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--primary); margin-bottom:10px;">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 0 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15Z" />
-        </svg>
-        <h3>Settings</h3>
-        <p class="text-muted" style="font-size:0.85rem;">Institution details, branding and receipt configuration.</p>
-      </div>
-
-      <div class="card" style="display:flex; flex-direction:column; justify-content:center; background: var(--primary); border-color: var(--primary);">
-        <h3 style="color:#fff;">Ready to begin?</h3>
-        <p style="font-size:0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 14px;">Open the dashboard to see today's overview.</p>
-        <a href="pages/dashboard.html" class="btn" style="background:#fff; border-color:#fff; color:var(--primary); align-self:flex-start;">Open dashboard</a>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer class="public-footer">
-  <div class="public-footer__inner">
-    <div>
-      <h4>Janaki Professional Academy</h4>
-      <p>Dikhlem, Dayangmukh West,<br />Karbi Anglong, Assam, India – 782448</p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p><a href="tel:+917896579939">+91 78965 79939</a></p>
-      <p><a href="mailto:janakipa@gmail.com">janakipa@gmail.com</a></p>
-    </div>
-    <div>
-      <h4>ERP</h4>
-      <p><a href="pages/dashboard.html">Dashboard</a></p>
-      <p><a href="settings.html">Institution settings</a></p>
-    </div>
-  </div>
-  <div class="public-footer__bottom">
-    &copy; 2026 Janaki Professional Academy. All rights reserved.
-  </div>
-</footer>
-
-<script src="script.js"></script>
+<!-- Page-specific JavaScript -->
+<script src="js/login.js"></script>
 </body>
 </html>
